@@ -1,35 +1,32 @@
 <template>
-  <div class="center bandsPosition">
-    <div class="bandsPosition__div bandsPosition__div_stil"></div>
-    <div class="bandsPosition__div bandsPosition__div_stil"></div>
-    <div class="bandsPosition__div bandsPosition__div_stil"></div>
-    <div class="bands">
-      <div id="app">
-        <VueSiteHead></VueSiteHead>
-        <VueSiteMain></VueSiteMain>
-        <VueSiteFooter></VueSiteFooter>
-      </div>
-    </div>
+  <div id="app">
+    <ProjectDetails></ProjectDetails>
   </div>
 </template>
 
 <script>
-import VueSiteHead from './components/head.vue'
-import VueSiteFooter from './components/footer.vue'
-import VueSiteMain from './components/main.vue'
-
+// import { mapState } from "vuex";
+import ProjectDetails from "./pages/ProjectDetails";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    VueSiteHead,
-    VueSiteMain,
-    VueSiteFooter
-
-  }
-}
+    ProjectDetails,
+  },
+  data() {
+    return {
+      res: "",
+    };
+  },
+  
+};
 </script>
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+
+
 * {
   margin: 0px;
   padding: 0px;
@@ -39,26 +36,5 @@ export default {
 .center {
   padding-left: calc(50% - 540px);
   padding-right: calc(50% - 540px);
-}
-
-.bandsPosition {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  position: relative;
-
-  &__div {
-
-    &_stil {
-      min-height: 4500px;
-      border-left: 1px solid #E6E6E6;
-      border-right: 1px solid #E6E6E6;
-    }
-  }
-
-}
-
-.bands {
-  position: absolute;
-
 }
 </style>
