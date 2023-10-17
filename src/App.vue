@@ -1,16 +1,17 @@
 <template>
   <div id="app">
-    <ProjectDetails></ProjectDetails>
+    <BlogPage></BlogPage>
   </div>
 </template>
 
 <script>
+import BlogPage from './pages/BlogPage'
 // import { mapState } from "vuex";
-import ProjectDetails from "./pages/ProjectDetails";
 export default {
   name: "App",
   components: {
-    ProjectDetails,
+    BlogPage,
+    
   },
   data() {
     return {
