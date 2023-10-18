@@ -38,7 +38,8 @@ import Head from "../components/head";
 import store from "@/store";
 export default {
   components: {
-    Footer, Head },
+    Footer, Head,
+},
   name: "VueSiteProjectDetails",
 
   data() {

@@ -1,16 +1,21 @@
 <template>
   <div id="app">
-    <BlogPage></BlogPage>
+    <ProjectPage></ProjectPage>
+    <Pages404></Pages404>
   </div>
 </template>
 
 <script>
-import BlogPage from './pages/BlogPage'
+import Pages404 from './pages/pages404'
+import ProjectPage from './pages/ProjectPage'
+
 // import { mapState } from "vuex";
 export default {
   name: "App",
   components: {
-    BlogPage,
+    Pages404,
+    ProjectPage,
+   
     
   },
   data() {
@@ -25,8 +30,6 @@ export default {
 <style lang="scss">
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-
-
 
 * {
   margin: 0px;
