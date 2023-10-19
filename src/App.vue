@@ -1,40 +1,34 @@
 <template>
   <div id="app">
-    <ProjectPage></ProjectPage>
-    <Pages404></Pages404>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Pages404 from './pages/pages404'
-import ProjectPage from './pages/ProjectPage'
-
 // import { mapState } from "vuex";
 export default {
   name: "App",
-  components: {
-    Pages404,
-    ProjectPage,
-   
-    
-  },
+  components: {},
   data() {
     return {
       res: "",
     };
   },
-  
+
+  created() {
+    this.$router.push({ name: "home" });
+  },
 };
 </script>
 
 <style lang="scss">
-
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .center {

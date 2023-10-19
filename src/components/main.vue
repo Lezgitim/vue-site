@@ -15,15 +15,16 @@
                                     lorem Ipsum fromavailable, majority.
                                 </h2>
                             </div>
-                            <div class="blok2__button">
+                            <router-link to="/info"><div class="blok2__button">
                                 <button class="blok2__button_button"><span class="blok2__button_buttonSpan">Get
-                                        Started</span> <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17"
+                                        Started (ошибка 404)</span> <svg xmlns="http://www.w3.org/2000/svg" width="19" height="17"
                                         viewBox="0 0 19 17" fill="none">
                                         <path d="M2 8.43542L15.7232 8.29857M10.6182 1.91138L17.1412 8.43436L10.4868 15.0887"
                                             stroke="#CDA274" stroke-width="2" stroke-linecap="square"
                                             stroke-linejoin="round" />
                                     </svg></button>
-                            </div>
+                            </div></router-link>
+                            
                         </div>
                     </div>
                 </div>

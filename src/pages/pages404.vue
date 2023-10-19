@@ -10,11 +10,13 @@
               </div>
 
               <div class="contant_box_404">
-                <h3 class="h2">Look like you're lost</h3>
+                <h3 class="h2">Похоже, вы заблудились</h3>
 
-                <p>the page you are looking for not avaible!</p>
+                <p>страница, которую вы ищете, недоступна!</p>
 
-                <a href="" class="link_404">Go to Home</a>
+                <router-link to="/home"
+                  ><p class="link_404">Go to Home</p></router-link
+                >
               </div>
             </div>
           </div>
@@ -67,6 +69,9 @@ export default {
 
 .four_zero_four_bg h1 {
   font-size: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .four_zero_four_bg h3 {
@@ -81,6 +86,11 @@ export default {
   display: inline-block;
 }
 .contant_box_404 {
+  display: flex;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  align-items: center;
   margin-top: -50px;
 }
 </style>

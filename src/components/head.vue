@@ -2,14 +2,39 @@
   <div>
     <header>
       <nav class="center nav">
-        <div class="interno">
-          <img width="34px" height="34px" src="../assets/logo.png" alt="logo" />
-          <h3 class="nav__h3_logo">Interno</h3>
-        </div>
+        <router-link to="/home">
+          <div class="interno">
+            <img
+              width="34px"
+              height="34px"
+              src="../assets/logo.png"
+              alt="logo"
+            />
+            <h3 class="nav__h3_logo">Interno</h3>
+          </div></router-link
+        >
+
         <div class="nav__div">
-          <p class="nav__div_Home nav__div_p">Home</p>
-          <p class="nav__div_Project nav__div_p">Project</p>
-          <p class="nav__div_Blog nav__div_p">Blog</p>
+          <router-link to="/home"
+            ><p href="/home" class="nav__div_Home nav__div_p">
+              Home
+            </p></router-link
+          >
+          <router-link to="/project"
+            ><p class="nav__div_Project nav__div_p">Project</p></router-link
+          >
+
+          <router-link to="/project/details"
+            > <p class="nav__div_Blog nav__div_p">(ProjDet)</p></router-link
+          > 
+
+          <router-link to="/blog"
+            > <p class="nav__div_Blog nav__div_p">Blog</p></router-link
+          >
+          <router-link to="/blog/details"
+            > <p class="nav__div_Blog nav__div_p">(BlogDet)</p></router-link
+          > 
+         
         </div>
       </nav>
     </header>
@@ -58,17 +83,16 @@ export default {
 .nav__div {
   display: flex;
   justify-content: space-between;
-  width: 240px;
-}
-
-.nav_p {
-  color: #292f36;
-  text-align: center;
-  font-family: Jost;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 125%;
+  width: 360px;
+  &_p {
+    color: #292f36;
+    text-align: center;
+    font-family: Jost;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+  }
 }
 
 .nav__h3_logo {
